@@ -6,6 +6,7 @@ require_once __DIR__ . '/Models/Cibo.php';
 $prodotto1 = new Prodotti('Guinzaglio', 'cane', 20.99);
 $prodotto2 = new Prodotti('Topo finto', 'gatto', 10.99);
 $prodotto3 = new Cibo('Royal Canin Mini Adult', 'cane', 40.50);
+$prodotto3->set_ingredienti('prosciutto', 'riso');
 
 
 $prodotti = [
@@ -40,6 +41,9 @@ $prodotti = [
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $prodotto->get_nomeProdotto(); ?></h5>
                             <p class="card-text"><?php echo $prodotto->get_animale(); ?></p>
+                            <?php if (method_exists($prodotto, 'get_ingredienti')) : ?>
+                                <p class="card-text">ingredienti: <?php echo $prodotto->get_ingredienti(); ?></p>
+                            <?php endif; ?>
                             <p class="card-text">Prezzo:€ <?php echo $prodotto->get_prezzo(); ?></p>
                             
                         </div>
