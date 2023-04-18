@@ -1,3 +1,17 @@
+<?php
+require_once __DIR__ . '/Models/Categoria.php';
+require_once __DIR__ . '/Models/Prodotto.php';
+
+$prodotto1 = new Prodotti('Guinzaglio', 'cane', 20.99);
+$prodotto2 = new Prodotti('Topo finto', 'gatto', 10.99);
+
+$prodotti = [
+    $prodotto1,
+    $prodotto2,
+];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,21 +29,22 @@
         <h1>Negozio per animali</h1>
 
         <div class="row">
-            <div class="col-12 col-md-3">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+            <?php foreach ($prodotti as $prodotto) : ?>
+                <div class="col-12 col-md-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $prodotto->get_nomeProdotto(); ?></h5>
+                            <p class="card-text"><?php echo $prodotto->get_animale(); ?></p>
+                            <p class="card-text">Prezzo:€ <?php echo $prodotto->get_prezzo(); ?></p>
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 
 </body>
 
 </html>
-
-

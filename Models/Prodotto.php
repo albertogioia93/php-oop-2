@@ -56,7 +56,3 @@ class Accessori extends Prodotti
     private $materiale;
     private $dimensioni;
 };
-
-var_dump(new Cibo());
-var_dump(new Giochi());
-var_dump(new Accessori());
