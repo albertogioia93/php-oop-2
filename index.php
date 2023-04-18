@@ -1,26 +1,35 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-class Prodotti {
-    public $nomeProdotto;
-    public $animale;
-    public $prezzo;
-};
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- collegamento al framework bootstrap via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Boolshop</title>
+</head>
 
-class Cibo extends Prodotti {
-    public $pesoNetto;
-    public $ingredienti;
-};
+<body>
+    <div class="container">
+        <h1>Negozio per animali</h1>
 
-class Giochi extends Prodotti {
-    public $caratteristiche;
-    public $dimensioni;
-};
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-class Accessori extends Prodotti {
-    public $materiale;
-    public $dimensioni;
-};
+</body>
 
-var_dump(new Cibo());
-var_dump(new Giochi());
-var_dump(new Accessori());
+</html>
+
+
