@@ -39,11 +39,7 @@ class Prodotti
     }
 };
 
-class Cibo extends Prodotti
-{
-    private $pesoNetto;
-    private $ingredienti;
-};
+
 
 class Giochi extends Prodotti
 {

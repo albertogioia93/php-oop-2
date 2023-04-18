@@ -1,13 +1,17 @@
 <?php
 require_once __DIR__ . '/Models/Categoria.php';
 require_once __DIR__ . '/Models/Prodotto.php';
+require_once __DIR__ . '/Models/Cibo.php';
 
 $prodotto1 = new Prodotti('Guinzaglio', 'cane', 20.99);
 $prodotto2 = new Prodotti('Topo finto', 'gatto', 10.99);
+$prodotto3 = new Cibo('Royal Canin Mini Adult', 'cane', 40.50);
+
 
 $prodotti = [
     $prodotto1,
     $prodotto2,
+    $prodotto3,
 ];
 
 ?>
